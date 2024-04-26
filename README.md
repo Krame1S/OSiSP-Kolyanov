@@ -13,12 +13,12 @@
 | [Lab 07][lab07]       | :x: In progress  | No |
 | [Lab 08][lab08]       | :x: In progress  | No |
 
-[lab01]: https://github.com/vadimts/OSiSP/tree/master/lab01
-[lab02]: https://github.com/vadimts/OSiSP/tree/master/lab02
-[lab03]: https://github.com/vadimts/OSiSP/tree/master/lab03
-[lab04]: https://github.com/vadimts/OSiSP/tree/master/lab04
-[lab05]: https://github.com/vadimts/OSiSP/tree/master/lab05
-[lab06]: https://github.com/vadimts/OSiSP/tree/master/lab06
-[lab07]: https://github.com/vadimts/OSiSP/tree/master/lab07
-[lab08]: https://github.com/vadimts/OSiSP/tree/master/lab08
+[lab01]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab01
+[lab02]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab02
+[lab03]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab03
+[lab04]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab04
+[lab05]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab05
+[lab06]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab06
+[lab07]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab07
+[lab08]: https://github.com/Krame1S/OSiSP-Kolyanov/tree/master/lab08
 
