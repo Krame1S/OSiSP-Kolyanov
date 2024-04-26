@@ -1,2 +1,6 @@
 dirwalk
 main.o
+lab02/child
+lab02/child.o
+lab02/parent
+lab02/parent.o
