@@ -1,10 +1,6 @@
 # OSiSP labs will be here
 
-## Labs status
-
-Currently, I have completed 2 out of 8 labs and defended 1 out of 2 labs.
-
-## Progress
+## Labs progress
 
 | Lab                  | Status          | Defended |
 |----------------------|-----------------|----------|
