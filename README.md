@@ -6,7 +6,7 @@
 |----------------------|-----------------|----------|
 | [Lab 01][lab01]       | :white_check_mark: Completed | Yes |
 | [Lab 02][lab02]       | :white_check_mark: Completed | Yes |
-| [Lab 03][lab03]       | :x: In progress  | No |
+| [Lab 02][lab03]       | :white_check_mark: Completed | Yes |
 | [Lab 04][lab04]       | :x: In progress  | No |
 | [Lab 05][lab05]       | :x: In progress  | No |
 | [Lab 06][lab06]       | :x: In progress  | No |
