@@ -5,3 +5,8 @@ lab02/child.o
 lab02/parent
 lab02/parent.o
 lab03/lab3
+lab04/consumer
+lab04/consumer.o
+lab04/producer
+lab04/producer.o
+lab04/main
