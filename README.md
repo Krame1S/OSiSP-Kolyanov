@@ -1,6 +1,4 @@
-# OSiSP labs will be here
-
-## Labs progress
+# Labs progress
 
 | Lab                  | Status          | Defended |
 |----------------------|-----------------|----------|
