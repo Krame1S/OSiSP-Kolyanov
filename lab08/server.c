@@ -16,7 +16,7 @@
 
 #define BUFFER_SIZE 2048
 
-int Socket(int domain, int type, int protocol) {
+int Socket(int domain, int type, int protocol) { // соединяет потоки
     int res = socket(domain, type, protocol);
     if (res == -1) {
         perror("Error opening socket");
@@ -25,7 +25,7 @@ int Socket(int domain, int type, int protocol) {
     return res;
 }
 
-int Bind(int fd, const struct sockaddr* addr, socklen_t len) {
+int Bind(int fd, const struct sockaddr* addr, socklen_t len) { // для связи адреса с сокетом
     int res = bind(fd, addr, len);
     if (res == -1) {
         perror("Error binding");
@@ -34,7 +34,7 @@ int Bind(int fd, const struct sockaddr* addr, socklen_t len) {
     return res;
 }
 
-int Listen(int fd, int n) {
+int Listen(int fd, int n) { // переводит сервер в режим прослушивания
     int res = listen(fd, n);
     if (res == -1) {
         perror("listen error");
@@ -235,12 +235,12 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    int serverfd = Socket(AF_INET, SOCK_STREAM, 0);
+    int serverfd = Socket(AF_INET, SOCK_STREAM, 0); // потоковый сокет, используемый для TCP
 
     struct sockaddr_in addr = {0};
-    addr.sin_family = AF_INET;
+    addr.sin_family = AF_INET; // указывает, что будет использоваться IPv4.
     addr.sin_port = htons(port);
-    addr.sin_addr.s_addr = INADDR_ANY;
+    addr.sin_addr.s_addr = INADDR_ANY; // INADDR_ANY - сервер будет принимать соединения на всех доступных интерфейсах.
 
     Bind(serverfd, (struct sockaddr*)&addr, sizeof(addr));
     Listen(serverfd, 5);
