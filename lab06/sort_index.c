@@ -47,15 +47,15 @@ void *sort_blocks(void *arg) {
 
     printf("Thread %lu started sorting\n", pthread_self());
 
-    // Wait for all threads to be ready
+    // подождать пока все потоки выполняться
     pthread_barrier_wait(&barrier);
 
     while (1) {
-        // Sort the assigned block
+        // сортировать блок
         printf("Thread %lu sorting block of size %zu\n", pthread_self(), size);
         qsort(array, size, sizeof(struct index_s), compare);
 
-        // Get the next block to sort
+        // к следующему блоку
         pthread_mutex_lock(&mutex);
         if (block_index >= (size_t)blocks) {
             pthread_mutex_unlock(&mutex);
@@ -68,7 +68,7 @@ void *sort_blocks(void *arg) {
         size = (current_block == (size_t)(blocks - 1)) ? (block_size + (global_index_array + (blocks * block_size) - array)) : block_size;
     }
 
-    // Wait for all threads to finish sorting
+    // подождать выполнение сорироки всех потоков
     pthread_barrier_wait(&barrier);
 
     printf("Thread %lu finished sorting\n", pthread_self());
@@ -130,15 +130,15 @@ int main(int argc, char *argv[]) {
     }
 
     size_t file_size = st.st_size;
-    struct index_hdr_s *header = mmap(NULL, file_size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    struct index_hdr_s *header = mmap(NULL, file_size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0); // Файл отображается в память. работа с содержимым файла как с обычной памятью в программе
     if (header == MAP_FAILED) {
         perror("mmap");
         close(fd);
         return EXIT_FAILURE;
     }
 
-    size_t num_records = header->records;
-    global_index_array = header->idx;
+    size_t num_records = header->records; //общее количество записей
+    global_index_array = header->idx; // ууказывает на массив структур index_s, который мы хотим отсортировать
 
     block_size = num_records / blocks;
     pthread_t tid[threads];

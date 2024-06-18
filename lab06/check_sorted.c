@@ -43,16 +43,16 @@ int is_sorted(const char *filename) {
     struct index_s *index_array = header->idx;
 
     for (size_t i = 1; i < num_records; ++i) {
-        if (index_array[i - 1].time_mark > index_array[i].time_mark) {
+        if (index_array[i - 1].time_mark > index_array[i].time_mark) { // текущая временная метка меньше предыдущей
             munmap(header, file_size);
             close(fd);
-            return 0; // File is not sorted
+            return 0; 
         }
     }
 
     munmap(header, file_size);
     close(fd);
-    return 1; // File is sorted
+    return 1;
 }
 
 int main(int argc, char *argv[]) {
