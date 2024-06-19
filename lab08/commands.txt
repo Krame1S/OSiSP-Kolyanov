@@ -1,0 +1,4 @@
+ECHO hi
+LIST
+CD 
+INFO
